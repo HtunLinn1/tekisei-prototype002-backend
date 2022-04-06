@@ -7,7 +7,7 @@ ruby "3.0.2"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -39,7 +39,14 @@ gem "devise_token_auth", '>= 1.2.0', git: "https://github.com/lynndylanhurley/de
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
-gem 'pg', group: :production
+group :development, :test do
+  gem 'sqlite3'
+end
+
+# 本番環境ではPostgresqlを使う
+group :production do
+  gem 'pg', '0.20.0'
+end
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
