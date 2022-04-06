@@ -50,12 +50,12 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-
+  # Full error reports are disabled and caching is turned on.
+  config.action_controller.perform_caching = true
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "prototype_backend_production"
-  config.consider_all_requests_local = false
-  config.action_mailer.perform_caching = true
+  config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
