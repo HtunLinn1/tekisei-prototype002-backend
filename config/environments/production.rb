@@ -68,6 +68,22 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
+  # Ignore bad email addresses and do not raise email delivery errors.
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { host: 'https://tekisei-ruby-proto-backend.herokuapp.com/' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "cybermissions.co.jp",
+    :port => 587,
+    :user_name => 'cybermissions',
+    :password => '12345678',
+    :authentication => "plain",
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
+  }
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
