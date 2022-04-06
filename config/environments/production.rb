@@ -75,10 +75,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://tekisei-ruby-proto-backend.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "cybermissions.co.jp",
+    :address => "noreply@cybermissions.co.jp",
     :port => 587,
-    :user_name => 'cybermissions',
-    :password => '12345678',
+    :user_name => 'noreply',
+    :password => '3847xyAB',
     :authentication => "plain",
     :enable_starttls_auto => true,
     :openssl_verify_mode  => 'none'
