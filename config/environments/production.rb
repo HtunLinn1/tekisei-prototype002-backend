@@ -77,8 +77,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address => "noreply@cybermissions.co.jp",
     :port => 587,
-    :user_name => 'noreply',
-    :password => '3847xyAB',
+    :user_name => ENV["MAIL_USER"],
+    :password => ENV["MAIL_PASS"],
     :authentication => "plain",
     :enable_starttls_auto => true,
     :openssl_verify_mode  => 'none'

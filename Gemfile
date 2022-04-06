@@ -39,6 +39,8 @@ gem "devise_token_auth", '>= 1.2.0', git: "https://github.com/lynndylanhurley/de
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'sqlite3'
 end
