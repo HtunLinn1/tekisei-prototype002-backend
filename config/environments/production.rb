@@ -79,8 +79,9 @@ Rails.application.configure do
     :port => 587,
     :user_name => ENV["SEND_MAIL_USER"],
     :password => ENV["SEND_MAIL_PASS"],
-    :authentication => "plain",
+    :authentication => :plain,
     :enable_starttls_auto => true,
+    :domain => 'tekisei-ruby-proto-backend.herokuapp.com',
     :openssl_verify_mode  => 'none'
   }
 
