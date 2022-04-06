@@ -39,7 +39,7 @@ gem "devise_token_auth", '>= 1.2.0', git: "https://github.com/lynndylanhurley/de
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
-gem 'pg'
+gem 'pg', group: :production
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
