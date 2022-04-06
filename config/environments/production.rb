@@ -72,16 +72,16 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { host: 'https://tekisei-ruby-proto-backend.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://tekisei-ruby-proto-backend.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "noreply@cybermissions.co.jp",
-    :port => 587,
+    :port => "587",
     :user_name => ENV["SEND_MAIL_USER"],
     :password => ENV["SEND_MAIL_PASS"],
     :authentication => :plain,
     :enable_starttls_auto => true,
-    :domain => 'tekisei-ruby-proto-backend.herokuapp.com',
+    :domain => 'heroku.com',
     :openssl_verify_mode  => 'none'
   }
 
