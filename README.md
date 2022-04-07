@@ -22,7 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-# heroku config:add SEND_MAIL_PASS=3847xyAB
-
-# heroku config:add SEND_MAIL_USER=noreply@cybermissions.co.jp
