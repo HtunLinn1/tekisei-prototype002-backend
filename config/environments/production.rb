@@ -48,13 +48,13 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'https://tekisei-prototype.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://tekisei-ruby-proto-backend.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "cybermissions.co.jp",
     :port => 587,
-    :user_name => ENV["SEND_MAIL"],
-    :password => ENV["SEND_MAIL_PASSWORD"],
+    :user_name => ENV["SEND_MAIL_USER"],
+    :password => ENV["SEND_MAIL_PASS"],
     :authentication => "plain",
     :enable_starttls_auto => true,
     :openssl_verify_mode  => 'none'
