@@ -41,6 +41,8 @@ gem "rack-cors"
 
 gem 'dotenv-rails'
 
+gem "figaro"
+
 group :development, :test do
   gem 'sqlite3'
 end
