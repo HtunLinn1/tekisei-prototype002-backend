@@ -67,13 +67,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :address => "cybermissions.co.jp",
-    :port => 587,
-    :user_name => ENV["SEND_MAIL_USER"],
-    :password => ENV["SEND_MAIL_PASS"],
-    :authentication => "plain",
-    :enable_starttls_auto => true,
-    :openssl_verify_mode  => 'none'
+    address: "cybermissions.co.jp",
+    port: 587,
+    user_name: ENV["SEND_MAIL_USER"],
+    password: ENV["SEND_MAIL_PASS"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'none'
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
