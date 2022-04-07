@@ -74,7 +74,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     openssl_verify_mode: 'none',
-    domain: 'cybermissions.co.jp'
+    domain: 'co.jp'
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
