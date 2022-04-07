@@ -73,7 +73,8 @@ Rails.application.configure do
     password: ENV["SEND_MAIL_PASS"],
     authentication: "plain",
     enable_starttls_auto: true,
-    openssl_verify_mode: 'none'
+    openssl_verify_mode: 'none',
+    domain: 'cybermissions.co.jp'
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
