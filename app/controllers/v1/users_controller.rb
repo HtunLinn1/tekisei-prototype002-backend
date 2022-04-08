@@ -7,4 +7,11 @@ class V1::UsersController < ApplicationController
     Rails.logger.error(e)
     render_internal_server_error(e)
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    render json: { user: @user }, status: :ok
+  end
 end
